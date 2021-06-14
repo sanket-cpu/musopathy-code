@@ -43,26 +43,29 @@ class _IntroScreenState extends State<IntroScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: key,
-      // appBar: AppBar(
-      //   brightness: Brightness.light,
-      //   iconTheme: IconThemeData(
-      //     color: Theme.of(context).primaryColor,
-      //   ),
-      //   toolbarHeight: 50,
-      //   backgroundColor: Color(0xFFDFDFDF),
-      //   automaticallyImplyLeading: true,
-      //   title: Text(
-      //     'M U S O P A T H Y',
-      //     style: TextStyle(
-      //       fontFamily: 'Ubuntu',
-      //       fontSize: 25,
-      //       fontWeight: FontWeight.w800,
-      //     ),
-      //   ),
-      //   actions: [],
-      //   centerTitle: true,
-      //   elevation: 4,
-      // ),
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Color.fromRGBO(40, 115, 161, 1.0)),
+        backgroundColor: Colors.white,
+        //   brightness: Brightness.light,
+        //   iconTheme: IconThemeData(
+        //     color: Theme.of(context).primaryColor,
+        //   ),
+        //   toolbarHeight: 50,
+        //   backgroundColor: Color(0xFFDFDFDF),
+        //   automaticallyImplyLeading: true,
+        title: Text(
+          'M U S O P A T H Y',
+          style: TextStyle(
+            fontFamily: 'Ubuntu',
+            fontSize: 20,
+            color: Color.fromRGBO(40, 115, 161, 1.0),
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        //   actions: [],
+        //   centerTitle: true,
+        //   elevation: 4,
+      ),
       drawer: Drawer(),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -111,7 +114,7 @@ class _IntroScreenState extends State<IntroScreen> {
                       ),
                     ),
                   ),
-                  Positioned(
+                  /*  Positioned(
                     top: 50.0,
                     left: 20.0,
                     child: IconButton(
@@ -120,11 +123,11 @@ class _IntroScreenState extends State<IntroScreen> {
                       color: Theme.of(context).primaryColor,
                       onPressed: () => key.currentState.openDrawer(),
                     ),
-                  ),
+                  ),*/
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(30, 8, 30, 16),
+                padding: const EdgeInsets.fromLTRB(30, 0, 30, 0),
                 child: Text(
                   'Musopathy provides revolutionary tools for individual and organizational Health and Wellness like the Tonation Breathing Techniques (TBT) Program to manage Covid Symptoms, Anxiety and Depression.  TBT is a specially evolved program that includes diverse non-strenuous Breathing techniques anchored on published studies by Harvard, Johns Hopkins etc.  The special feature is the addition of Tonation through nostrils or lips to most techniques which has enabled hundreds to improve their lung, immunological and psychological health besides increasing focus energy, clarity, decision making abilities and decreasing stress and fatigue.',
                   textAlign: TextAlign.justify,
@@ -172,7 +175,7 @@ class _IntroScreenState extends State<IntroScreen> {
                 child: */
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                    primary: Color.fromRGBO(14, 81, 102, 1.0),
+                    primary: Color.fromRGBO(40, 115, 161, 1.0),
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12.0)),
                     padding: EdgeInsets.symmetric(horizontal: 100)),

@@ -73,12 +73,39 @@ class SignInwidget extends State<SignIn> {
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
-                      primary: Colors.cyan.shade900,
+                      primary: Color.fromRGBO(40, 115, 161, 1.0),
                       onPrimary: Colors.white),
                 ),
               ),
             ),
-            Container(
+            Center(
+              child: Text("or Login with"),
+            ),
+            InkWell(
+              onTap: () {},
+              child: Ink(
+                padding: EdgeInsets.all(6),
+                child: Wrap(
+                  crossAxisAlignment: WrapCrossAlignment.center,
+                  children: [
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      radius: 30,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                              image:
+                                  AssetImage("assets/images/google_logo.png"),
+                              fit: BoxFit.fill),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            /* Container( ,) ,
               width: MediaQuery.of(context).size.width / 1.4,
               height: 45,
               decoration:
@@ -96,7 +123,7 @@ class SignInwidget extends State<SignIn> {
                     primary: Colors.black,
                     onPrimary: Colors.white),
               ),
-            ),
+            ),*/
           ],
         ),
       ),

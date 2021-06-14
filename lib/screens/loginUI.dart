@@ -20,6 +20,30 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
     final tabcontroller = new TabController(length: 2, vsync: this);
 
     return Scaffold(
+      appBar: AppBar(
+        iconTheme: IconThemeData(color: Color.fromRGBO(40, 115, 161, 1.0)),
+        backgroundColor: Colors.white,
+        //   brightness: Brightness.light,
+        //   iconTheme: IconThemeData(
+        //     color: Theme.of(context).primaryColor,
+        //   ),
+        //   toolbarHeight: 50,
+        //   backgroundColor: Color(0xFFDFDFDF),
+        //   automaticallyImplyLeading: true,
+        title: Text(
+          'M U S O P A T H Y',
+          style: TextStyle(
+            fontFamily: 'Ubuntu',
+            fontSize: 20,
+            color: Color.fromRGBO(40, 115, 161, 1.0),
+            fontWeight: FontWeight.normal,
+          ),
+        ),
+        //   actions: [],
+        //   centerTitle: true,
+        //   elevation: 4,
+      ),
+      drawer: Drawer(),
       body: SafeArea(
         child: Container(
           width: MediaQuery.of(context).size.width,
@@ -34,19 +58,21 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       decoration: BoxDecoration(
                           gradient: LinearGradient(
                               colors: [
-                            Color.fromRGBO(202, 202, 202, 1.0),
-                            Color.fromRGBO(1, 67, 88, 1.0)
+                            Colors.white,
+                            // Color.fromRGBO(202, 202, 202, 1.0),
+                            Color.fromRGBO(40, 115, 161, 1.0)
+                            // Color.fromRGBO(1, 67, 88, 1.0)
                           ],
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter)),
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 3,
+                      height: MediaQuery.of(context).size.height / 4,
                     ),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(35.0),
                         bottomRight: Radius.circular(35)),
                   ),
-                  Positioned(
+                  /* Positioned(
                     bottom: 200,
                     left: 90,
                     child: Text(
@@ -57,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                           letterSpacing: 4,
                           color: Colors.black),
                     ),
-                  ),
+                  ),*/
                   Positioned(
                       bottom: 170,
                       left: 90,
@@ -66,7 +92,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                         style: GoogleFonts.poiretOne(
                           textStyle: TextStyle(
                               letterSpacing: 2,
-                              color: Color.fromRGBO(239, 239, 239, 1.0),
+                              color: Color.fromRGBO(1, 67, 88, 1.0),
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold),
                         ),
@@ -79,7 +105,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                       style: GoogleFonts.poiretOne(
                           textStyle: TextStyle(
                               letterSpacing: 2,
-                              color: Color.fromRGBO(239, 239, 239, 1.0),
+                              color: Color.fromRGBO(1, 67, 88, 1.0),
                               fontSize: 18.0,
                               fontWeight: FontWeight.bold)),
                     ),
@@ -90,16 +116,15 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     child: Text(
                       'TECHNIQUES',
                       style: GoogleFonts.poiretOne(
-                        textStyle: TextStyle(
-                            letterSpacing: 2,
-                            color: Color.fromRGBO(239, 239, 239, 1.0),
-                            fontSize: 18.0,
-                            fontWeight: FontWeight.bold),
-                      ),
+                          textStyle: TextStyle(
+                              letterSpacing: 2,
+                              color: Color.fromRGBO(1, 67, 88, 1.0)),
+                          fontSize: 18.0,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
                   Positioned(
-                    bottom: -25,
+                    bottom: -50,
                     right: -80,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
