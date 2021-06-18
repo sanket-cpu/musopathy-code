@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:musopathy/fields/registerwidget.dart';
 import 'package:musopathy/fields/signinwidget.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -52,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Stack(
+                alignment: Alignment.topCenter,
                 children: [
                   ClipRRect(
                     child: Container(
@@ -66,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter)),
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 4,
+                      height: MediaQuery.of(context).size.height / 3.5,
                     ),
                     borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(35.0),
@@ -128,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                     right: -80,
                     child: Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 3,
+                      height: MediaQuery.of(context).size.height / 2.7,
                       child: ClipRRect(
                         child: Image(
                           image: AssetImage('assets/images/meditatingman.png'),

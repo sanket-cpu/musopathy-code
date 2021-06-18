@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import 'package:musopathy/screens/adduser.dart';
+import 'package:musopathy/screens/contactus.dart';
 import 'package:musopathy/screens/languagePage.dart';
 import 'package:musopathy/screens/register.dart';
 import 'package:musopathy/screens/signin.dart';
@@ -136,6 +137,26 @@ class _IntroScreenState extends State<IntroScreen> {
               ),
               SizedBox(
                 height: 20.0,
+              ),
+              ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                    primary: Color.fromRGBO(40, 115, 161, 1.0),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(12.0)),
+                    padding: EdgeInsets.symmetric(horizontal: 100)),
+                onPressed: () => Navigator.push(context,
+                    MaterialPageRoute(builder: (_) => ContactScreen())),
+                child: new Text(
+                  "Contact Us",
+                  textAlign: TextAlign
+                      .center, //without alignment the size is according to the text
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w600,
+                    letterSpacing: 1.5,
+                  ),
+                ),
               ),
               /* GestureDetector(
                 onTap: () {
